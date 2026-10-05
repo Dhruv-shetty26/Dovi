@@ -40,9 +40,8 @@ class Settings:
     TTS_API_KEY: str = os.getenv("TTS_API_KEY", "")
 
     # --- LLM ---
-    # Which Gemini model to use.  "gemini-2.0-flash" is fast, free-tier
-    # friendly, and supports function calling (needed in Phase 2).
-    AI_MODEL: str = os.getenv("AI_MODEL", "gemini-2.0-flash")
+    # Which Gemini model to use. Updated to gemini-3.8-flash.
+    AI_MODEL: str = os.getenv("AI_MODEL", "gemini-3.8-flash")
 
     # --- Application ---
     APP_NAME: str = "Dovi"

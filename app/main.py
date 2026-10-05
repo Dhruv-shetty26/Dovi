@@ -27,11 +27,15 @@ def _setup_logging() -> None:
     date_format = "%H:%M:%S"
 
     logging.basicConfig(
-        level=getattr(logging, settings.LOG_LEVEL.upper(), logging.DEBUG),
+        level=getattr(logging, settings.LOG_LEVEL.upper(), logging.INFO),
         format=log_format,
         datefmt=date_format,
         handlers=[logging.StreamHandler(sys.stdout)],
     )
+
+    # Silence noisy HTTP connection pool logs from third-party libraries
+    for noisy_logger in ("httpcore", "httpx", "google", "urllib3"):
+        logging.getLogger(noisy_logger).setLevel(logging.WARNING)
 
 
 # Module-level logger for main.py itself.
