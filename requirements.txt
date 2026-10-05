@@ -6,3 +6,7 @@
 
 # Environment variable loading
 python-dotenv>=1.0.0
+
+# LLM — Google Gemini
+google-genai>=1.0.0
+
