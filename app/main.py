@@ -81,7 +81,7 @@ def _text_chat_loop() -> None:
         return
 
     print()
-    print("💬 Dovi is ready to chat! (type 'exit' to quit, 'reset' to clear history)")
+    print("💬 Dovi is ready! (Ask for timers, music, reminders, or apps. Type 'exit' to quit)")
     print()
 
     while True:
@@ -118,7 +118,7 @@ def run() -> None:
     _print_status("Agent", True)
     _print_status("Voice  (STT)", False)
     _print_status("Voice  (TTS)", False)
-    _print_status("Tools", False)
+    _print_status("Tools", True)
     _print_status("Avatar", False)
     _print_status("UI", False)
     logger.info("")
